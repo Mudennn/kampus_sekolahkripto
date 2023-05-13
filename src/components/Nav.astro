@@ -5,7 +5,7 @@ import {Icon} from 'astro-icon'
 import navData from '../data/navData';
 ---
 
-<nav aria-label="Primary">
+<!-- <nav aria-label="Primary">
     <div class="navbar">
         <a href="/" class="logomark" aria-label="Go home"><Icon name="logomark" width='60' /></a>
         <ul>
@@ -14,6 +14,15 @@ import navData from '../data/navData';
             ))}
 
         </ul>
+    </div>
+
+</nav> -->
+<nav class="flex items-center justify-between px-[35px] py-[20px]">
+    <a href="/" class="text-2xl">Kampus SekolahKripto</a>
+    <div class="flex items-center space-x-3">
+        <a href="/module" class="text-gray-700 hover:text-yellow-500">Module</a>
+        <a href="/ama" class="text-gray-700 hover:text-yellow-500">Ama</a>
+        <a href="/about" class="text-gray-700 hover:text-yellow-500"> About</a>
     </div>
 
 </nav>
