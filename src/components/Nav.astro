@@ -1,8 +1,8 @@
 ---
-import {Icon} from 'astro-icon'
-
+import { Icon } from "astro-icon";
+import Logo from "../images/Kampus.png";
 // data imports
-import navData from '../data/navData';
+import navData from "../data/navData";
 ---
 
 <!-- <nav aria-label="Primary">
@@ -17,12 +17,56 @@ import navData from '../data/navData';
     </div>
 
 </nav> -->
-<nav class="flex items-center justify-between px-[35px] py-[20px]">
-    <a href="/" class="text-2xl">Kampus SekolahKripto</a>
-    <div class="flex items-center space-x-3">
-        <a href="/module" class="text-gray-700 hover:text-yellow-500">Module</a>
-        <a href="/ama" class="text-gray-700 hover:text-yellow-500">Ama</a>
-        <a href="/about" class="text-gray-700 hover:text-yellow-500"> About</a>
-    </div>
-
+<nav
+  class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20 relative"
+>
+    <div class="relative flex items-center justify-between">
+      <a href="/" class="inline-flex items-center">
+        <img src={Logo} alt="" class="lg:w-32 w-20" />
+      </a>
+      <ul class="items-center hidden space-x-8 lg:flex">
+        <li>
+          <a
+            href="/modul"
+            class="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"
+          >
+            Modul
+          </a>
+        </li>
+        <li>
+          <a
+            href="/ama"
+            class="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"
+          >
+            AMA
+          </a>
+        </li>
+        <li>
+          <a
+            href="/launchpad"
+            class="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"
+          >
+            Launchpad
+          </a>
+        </li>
+        <li>
+          <a
+            href="/hubungikami"
+            class="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"
+          >
+            Hubungi Kami
+          </a>
+        </li>
+      </ul>
+      <ul class="items-center hidden space-x-8 lg:flex">
+        <li>
+          <a
+            href="/"
+            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-[2.5px] text-black bg-yellow-400 transition duration-200 rounded shadow-md hover:bg-white focus:shadow-outline focus:outline-none"
+          >
+            MULA
+          </a>
+        </li>
+      </ul>
+  </div>
 </nav>
