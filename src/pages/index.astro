@@ -1,8 +1,23 @@
 ---
+import AboutUs from "../components/AboutUs.astro";
+import Cta from "../components/Cta.astro";
+import Faq from "../components/Faq.astro";
+import Features from "../components/Features.astro";
+import Hero from "../components/Hero.astro";
+import Kurikulum from "../components/Kurikulum.astro";
+import NFT from "../components/NFT.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
 ---
 
 <MainLayout title="Kampus SekolahKripto">
-
+  <main>
+    <Hero />
+    <Features />
+    <NFT />
+    <AboutUs />
+    <Kurikulum />
+    <Faq />
+    <Cta />
+  </main>
 </MainLayout>
