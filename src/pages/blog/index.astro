@@ -1,6 +1,13 @@
 ---
 import Card from "../../components/Card.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
+
+interface Frontmatter{
+  title: string,
+  slug: string,
+}
+
+const posts = await Astro.glob<Frontmatter>('../blog/*.md')
 ---
 
 <MainLayout title="Blog">
@@ -13,13 +20,29 @@ import MainLayout from "../../layouts/MainLayout.astro";
 
   <div class="py-10 px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
     <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">
-      <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
-        <Card />
-  <Card />
-  <Card />
+      <div
+        class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
+      >
+        <Card
+          title="Pengenalan tentang blockchain"
+          description="test"
+          href="/posts/pengenalan-tentang-blockchain"
+          thumbnail="/src/images/Cardano.jpeg"
+        />
+        <Card
+          title="Pengenalan tentang blockchain"
+          description="test"
+          href="/posts/pengenalan-tentang-blockchain"
+          thumbnail="/src/images/NFTPangolin.jpeg"
+        />
+        <Card
+          title="Pengenalan tentang blockchain"
+          description="test"
+          href="/posts/pengenalan-tentang-blockchain"
+          thumbnail="/src/images/Metaone.jpeg"
+        />
       </div>
     </div>
-
   </div>
 
   <!-- <div class="grid grid-cols-3 gap-4 max-w-screen-lg mx-auto" >
