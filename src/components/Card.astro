@@ -3,12 +3,12 @@ import img1 from "../images/tezos1.jpg";
 
 interface Props {
   title: string;
-  description: string;
+  subheading: string;
   href: string;
   thumbnail: string;
 }
 
-const {title, description, href, thumbnail} = Astro.props as Props;
+const {title, subheading, href, thumbnail} = Astro.props as Props;
 ---
 
 <div
@@ -24,7 +24,7 @@ const {title, description, href, thumbnail} = Astro.props as Props;
       {title}
     </p>
     <p class="mb-3 text-gray-400 text-sm line-clamp-2">
-     {description}
+     {subheading}
     </p>
     <div class="flex items-center justify-start gap-2 mt-auto">
       <a

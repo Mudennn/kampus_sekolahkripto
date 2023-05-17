@@ -5,6 +5,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
 interface Frontmatter{
   title: string,
   slug: string,
+  thumbnail: string,
+  subheading: string,
 }
 
 const posts = await Astro.glob<Frontmatter>('../blog/*.md')
@@ -18,29 +20,20 @@ const posts = await Astro.glob<Frontmatter>('../blog/*.md')
     </p>
   </div>
 
-  <div class="py-10 px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
+  <div class=" px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
     <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">
       <div
         class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
       >
-        <Card
-          title="Pengenalan tentang blockchain"
-          description="test"
-          href="/posts/pengenalan-tentang-blockchain"
-          thumbnail="/src/images/Cardano.jpeg"
+      {posts.map((post) => (
+      <Card
+          title={post.frontmatter.title}
+          subheading={post.frontmatter.subheading}  
+          href={`/post/${post.frontmatter.slug}`}
+          thumbnail={post.frontmatter.thumbnail}
         />
-        <Card
-          title="Pengenalan tentang blockchain"
-          description="test"
-          href="/posts/pengenalan-tentang-blockchain"
-          thumbnail="/src/images/NFTPangolin.jpeg"
-        />
-        <Card
-          title="Pengenalan tentang blockchain"
-          description="test"
-          href="/posts/pengenalan-tentang-blockchain"
-          thumbnail="/src/images/Metaone.jpeg"
-        />
+      ))}
+        
       </div>
     </div>
   </div>
@@ -51,3 +44,7 @@ const posts = await Astro.glob<Frontmatter>('../blog/*.md')
   <Card />
 </div> -->
 </MainLayout>
+
+
+<!-- // description={post.rawContent().slice(0, 100)}  
+// ={`${post.rawContent().slice(0, 100)}...`} -->
