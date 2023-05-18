@@ -1,0 +1,25 @@
+---
+import MainLayout from "./MainLayout.astro";
+
+interface Props {
+  frontmatter: {
+    title: string;
+    slug: string;
+    thumbnail: string;
+    subheading: string;
+  };
+}
+
+const { frontmatter } = Astro.props as Props;
+---
+
+<MainLayout title={frontmatter.title}>
+ 
+    <div class="max-w-screen-md mx-auto">
+  <h1 class="font-bold text-2xl text-white">{frontmatter.title}</h1>
+  <!-- <h2>Post author: {frontmatter.author}</h2> -->
+  <!-- <p>{frontmatter.description}</p> -->
+</div>
+  <slot />
+  
+</MainLayout>

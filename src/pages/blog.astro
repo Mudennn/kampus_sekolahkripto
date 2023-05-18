@@ -1,6 +1,6 @@
 ---
-import Card from "../../components/Card.astro";
-import MainLayout from "../../layouts/MainLayout.astro";
+import Card from "../components/Card.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 
 interface Frontmatter{
   title: string,
@@ -9,10 +9,10 @@ interface Frontmatter{
   subheading: string,
 }
 
-const posts = await Astro.glob<Frontmatter>('../blog/*.md')
+const posts = await Astro.glob<Frontmatter>('./blog/*.md')
 ---
 
-<MainLayout title="Blog">
+<MainLayout title="Modul">
   <div class="p-4">
     <h2 class="lg:text-3xl text-3xl font-bold text-center text-white">Modul</h2>
     <p class="text-sm lg:text-base py-2 text-center text-gray-400 mt-2">
@@ -29,7 +29,7 @@ const posts = await Astro.glob<Frontmatter>('../blog/*.md')
       <Card
           title={post.frontmatter.title}
           subheading={post.frontmatter.subheading}  
-          href={`/post/${post.frontmatter.slug}`}
+          href={post.url}
           thumbnail={post.frontmatter.thumbnail}
         />
       ))}
