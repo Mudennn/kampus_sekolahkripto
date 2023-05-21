@@ -1,8 +1,8 @@
 ---
 import BG from "../images/Mask group.png";
-import img1 from "../images/tezos1.jpg";
-import img2 from "../images/tezos2.jpg";
-import img3 from "../images/tezos3.jpg";
+// import img1 from "../images/tezos1.jpg";
+// import img2 from "../images/tezos2.jpg";
+// import img3 from "../images/tezos3.jpg";
 
 import Card from "../components/Card.astro";
 // import MainLayout from "../layouts/MainLayout.astro";
@@ -37,7 +37,7 @@ const posts = await Astro.glob<Frontmatter>('../pages/blog/*.md')
       <div
         class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
       >
-      {posts.map((post) => (
+      {posts.slice(0,3).map((post) => (
       <Card
           title={post.frontmatter.title}
           subheading={post.frontmatter.subheading}  
@@ -46,6 +46,9 @@ const posts = await Astro.glob<Frontmatter>('../pages/blog/*.md')
         />
       ))}
         
+      </div>
+      <div class="flex justify-center mt-10 w-full">
+        <button class="button">Lihat Semua Laluan</button>
       </div>
     </div>
   </div>
