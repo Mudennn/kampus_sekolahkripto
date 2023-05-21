@@ -3,6 +3,18 @@ import BG from "../images/Mask group.png";
 import img1 from "../images/tezos1.jpg";
 import img2 from "../images/tezos2.jpg";
 import img3 from "../images/tezos3.jpg";
+
+import Card from "../components/Card.astro";
+// import MainLayout from "../layouts/MainLayout.astro";
+
+interface Frontmatter{
+  title: string,
+  slug: string,
+  thumbnail: string,
+  subheading: string,
+}
+
+const posts = await Astro.glob<Frontmatter>('../pages/blog/*.md')
 ---
 
 <section>
@@ -11,7 +23,33 @@ import img3 from "../images/tezos3.jpg";
     alt=""
     class="absolute -mt-[5%] rotate-180 left-0 hidden lg:block"
   />
-  <div class="py-20 relative">
+  <div class="mx-auto p-4">
+    <h3 class="lg:text-3xl text-3xl font-bold text-center text-white">
+      Terokai Lalu Pembelajaran Kami
+    </h3>
+    <p class="text-sm lg:text-base py-2 text-center text-gray-400 mt-2">
+      Pilih laluan anda untuk mempelajari asas web3!
+    </p>
+  </div>
+  
+  <div class=" px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
+    <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">
+      <div
+        class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
+      >
+      {posts.map((post) => (
+      <Card
+          title={post.frontmatter.title}
+          subheading={post.frontmatter.subheading}  
+          href={post.url}
+          thumbnail={post.frontmatter.thumbnail}
+        />
+      ))}
+        
+      </div>
+    </div>
+  </div>
+  <!-- <div class="py-20 relative">
     <div class="mx-auto p-4">
       <h3 class="lg:text-3xl text-3xl font-bold text-center text-white">
         Terokai Lalu Pembelajaran Kami
@@ -54,7 +92,7 @@ import img3 from "../images/tezos3.jpg";
                 >
                   Mula Belajar{" "}
                   <span>
-                    <!-- <TbArrowUpRight /> -->
+                    <TbArrowUpRight />
                   </span>
                 </span>
               </a>
@@ -87,7 +125,7 @@ import img3 from "../images/tezos3.jpg";
                 >
                   Mula Belajar{" "}
                   <span>
-                    <!-- <TbArrowUpRight /> -->
+                    <TbArrowUpRight />
                   </span>
                 </span>
               </a>
@@ -123,7 +161,7 @@ import img3 from "../images/tezos3.jpg";
                 >
                   Mula Belajar{" "}
                   <span>
-                    <!-- <TbArrowUpRight /> -->
+                    <TbArrowUpRight />
                   </span>
                 </span>
               </a>
@@ -134,7 +172,7 @@ import img3 from "../images/tezos3.jpg";
       <div class="flex justify-center mt-10 w-full">
         <button class="button">Lihat Semua Laluan</button>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
