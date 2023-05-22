@@ -1,20 +1,15 @@
 ---
-import BG from "../images/Mask group.png";
-// import img1 from "../images/tezos1.jpg";
-// import img2 from "../images/tezos2.jpg";
-// import img3 from "../images/tezos3.jpg";
-
+import BG from "/assets/Mask-group.png";
 import Card from "../components/Card.astro";
-// import MainLayout from "../layouts/MainLayout.astro";
 
-interface Frontmatter{
-  title: string,
-  slug: string,
-  thumbnail: string,
-  subheading: string,
+interface Frontmatter {
+  title: string;
+  slug: string;
+  thumbnail: string;
+  subheading: string;
 }
 
-const posts = await Astro.glob<Frontmatter>('../pages/blog/*.md')
+const posts = await Astro.glob<Frontmatter>("../pages/blog/*.md");
 ---
 
 <section>
@@ -23,36 +18,7 @@ const posts = await Astro.glob<Frontmatter>('../pages/blog/*.md')
     alt=""
     class="absolute -mt-[5%] rotate-180 left-0 hidden lg:block"
   />
-  <div class="mx-auto p-4">
-    <h3 class="lg:text-3xl text-3xl font-bold text-center text-white">
-      Terokai Lalu Pembelajaran Kami
-    </h3>
-    <p class="text-sm lg:text-base py-2 text-center text-gray-400 mt-2">
-      Pilih laluan anda untuk mempelajari asas web3!
-    </p>
-  </div>
-  
-  <div class=" px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
-    <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">
-      <div
-        class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
-      >
-      {posts.slice(0,3).map((post) => (
-      <Card
-          title={post.frontmatter.title}
-          subheading={post.frontmatter.subheading}  
-          href={post.url}
-          thumbnail={post.frontmatter.thumbnail}
-        />
-      ))}
-        
-      </div>
-      <div class="flex justify-center mt-10 w-full">
-        <button class="button">Lihat Semua Laluan</button>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="py-20 relative">
+  <div class="py-20 relative">
     <div class="mx-auto p-4">
       <h3 class="lg:text-3xl text-3xl font-bold text-center text-white">
         Terokai Lalu Pembelajaran Kami
@@ -62,120 +28,29 @@ const posts = await Astro.glob<Frontmatter>('../pages/blog/*.md')
       </p>
     </div>
 
-    <div
-      class="px-3 py-10 mx-2 sm:mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-18"
-    >
-      <div
-        class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
-      >
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
+      <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">
         <div
-          class="overflow-hidden transition-shadow duration-300 bg-gray-100 bg-opacity-5 shadow-lg rounded-lg"
+          class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
         >
-          <img
-            src={img1}
-            class="h-40 w-full rounded-md object-cover aspect-video"
-            alt="teztrack"
-          />
-          <div class="p-5">
-            <p class="mb-3 font-bold text-white tracking-wide uppercase">
-              Pemulaan ke Web3
-            </p>
-            <p class="mb-3 text-gray-400 text-sm">
-              Mulakan dari sini jika anda baru menggunakan web3.
-            </p>
-            <div class="flex items-center justify-start gap-2 mt-4">
-              <a
-                class="group text-yellow-400 transition-all duration-300 ease-in-out"
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="flex items-center gap-2 bg-left-bottom bg-gradient-to-r from-yellow-400 to-yellow-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                >
-                  Mula Belajar{" "}
-                  <span>
-                    <TbArrowUpRight />
-                  </span>
-                </span>
-              </a>
-            </div>
-          </div>
+          {
+            posts
+              .slice(0, 3)
+              .map((post) => (
+                <Card
+                  title={post.frontmatter.title}
+                  subheading={post.frontmatter.subheading}
+                  href={post.url}
+                  thumbnail={post.frontmatter.thumbnail}
+                />
+              ))
+          }
         </div>
-
-        <div
-          class="overflow-hidden transition-shadow duration-300 bg-gray-100 bg-opacity-5 shadow-lg rounded-lg"
-        >
-          <img
-            src={img2}
-            class="h-40 w-full rounded-md object-cover aspect-video"
-            alt="teztrack"
-          />
-          <div class="p-5">
-            <p class="mb-3 font-bold text-white tracking-wide uppercase">NFT</p>
-            <p class="mb-3 text-gray-400 text-sm">
-              Belajar bagaimana cara untuk membeli, menjual dan mint nft.
-            </p>
-            <div class="flex items-center justify-start gap-2 mt-4">
-              <a
-                class="group text-yellow-400 transition-all duration-300 ease-in-out"
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="flex items-center gap-2 bg-left-bottom bg-gradient-to-r from-yellow-400 to-yellow-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                >
-                  Mula Belajar{" "}
-                  <span>
-                    <TbArrowUpRight />
-                  </span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="overflow-hidden transition-shadow duration-300 bg-gray-100 bg-opacity-5 shadow-lg rounded-lg"
-        >
-          <img
-            src={img3}
-            class="h-40 w-full rounded-md object-cover aspect-video"
-            alt="teztrack"
-          />
-          <div class="p-5">
-            <p class="mb-3 font-bold text-white tracking-wide uppercase">
-              DeFi
-            </p>
-            <p class="mb-3 text-gray-400 text-sm">
-              Belajar bagaimana nak menyimpan, meminjam dan melabur aset kirpto
-              anda.
-            </p>
-            <div class="flex items-center justify-start gap-2 mt-4">
-              <a
-                class="group text-yellow-400 transition-all duration-300 ease-in-out"
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="flex items-center gap-2 bg-left-bottom bg-gradient-to-r from-yellow-400 to-yellow-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
-                >
-                  Mula Belajar{" "}
-                  <span>
-                    <TbArrowUpRight />
-                  </span>
-                </span>
-              </a>
-            </div>
-          </div>
+        <div class="flex justify-center mt-10 w-full">
+          <button class="button">Lihat Semua Laluan</button>
         </div>
       </div>
-      <div class="flex justify-center mt-10 w-full">
-        <button class="button">Lihat Semua Laluan</button>
-      </div>
-    </div> -->
+    </div>
   </div>
 </section>
 

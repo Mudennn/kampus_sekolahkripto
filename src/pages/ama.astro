@@ -1,0 +1,10 @@
+---
+import VideoAma from "../components/VideoAma.jsx"
+import MainLayout from "../layouts/MainLayout.astro";
+import react from "@astrojs/react";
+---
+<MainLayout title="ama">
+<div>
+    <VideoAma client:load />
+</div>
+</MainLayout>

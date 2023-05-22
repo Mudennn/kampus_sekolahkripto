@@ -1,14 +1,14 @@
 ---
-title: Module 1 - Introduction to Blockchain and Cryptocurrency
-subheading: What is blockchain?
-slug: introduction-to-blockchain-and-cryptocurrency
+title: Module 4 - Non-Fungible Tokens (NFT)
+subheading: What is NFT?
+slug: non-fungible-tokens
 layout: "../../layouts/BlogPostLayout.astro"
 
 thumbnail : /assets/tezos1.jpg
 video: "https://www.youtube.com/embed/zEA3cbJI8io?start=526&end=614"
 
 author: Aizuddin
-date: January 9, 2023
+date: January 20, 2023
 ---
 
 
