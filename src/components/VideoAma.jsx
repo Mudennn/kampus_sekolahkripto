@@ -1,11 +1,12 @@
 import ama from "../data/amaData";
+import '../../src/styles/style.css'
 
 import React, { useState } from "react";
 
-
 const VideoAma = () => {
 
-    // Popup state 
+
+  // Popup state
   const [popup, setPopup] = useState([]);
   const [popupToggle, setPopupToggle] = useState(false);
   const changeContent = (menu) => {
@@ -14,7 +15,7 @@ const VideoAma = () => {
   };
 
   return (
-    <div className="py-10 px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 ">
+    <div className=" px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 ">
       <div className="p-4 ">
         <h3 className=" lg:text-3xl text-3xl font-bold text-center text-white">
           Ask Me Anything Session!
@@ -28,7 +29,7 @@ const VideoAma = () => {
         <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
           {ama.map((menu, i) => (
             <div key={i}>
-              <div className="card cursor-pointer overflow-hidden bg-transparent bg-gray-300 bg-opacity-20 shadow-lg rounded-lg ">
+              <div className="card cursor-pointer overflow-hidden  bg-gray-300 bg-opacity-20 shadow-lg rounded-lg ">
                 <img
                   src={menu.image}
                   className=" w-full rounded-md object-cover aspect-square"
@@ -63,7 +64,20 @@ const VideoAma = () => {
             >
               <div className="justify-end flex m-3">
                 <button onClick={changeContent}>
-                  <RiCloseFill className="text-2xl text-white" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="white"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
                 </button>
               </div>
               <div>
@@ -87,7 +101,7 @@ const VideoAma = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default VideoAma
+export default VideoAma;
