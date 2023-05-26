@@ -1,8 +1,5 @@
 ---
-import { Icon } from "astro-icon";
-import Logo from "/assets/Kampus.png";
-// data imports
-import navData from "../data/navData";
+import Navbar from "../../src/components/Navbar.jsx";
 ---
 
 <!-- <nav aria-label="Primary">
@@ -17,56 +14,6 @@ import navData from "../data/navData";
     </div>
 
 </nav> -->
-<nav
-  class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20 relative"
->
-    <div class="relative flex items-center justify-between">
-      <a href="/" class="inline-flex items-center">
-        <img src={Logo} alt="kampus sekolah kripto" class="lg:w-32 w-20" />
-      </a>
-      <ul class="items-center hidden space-x-8 lg:flex">
-        <li>
-          <a
-            href="/modul"
-            class="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"
-          >
-            Modul
-          </a>
-        </li>
-        <li>
-          <a
-            href="/ama"
-            class="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"
-          >
-            AMA
-          </a>
-        </li>
-        <li>
-          <a
-            href="/tentangkami"
-            class="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"
-          >
-            Tentang Kami
-          </a>
-        </li>
-        <li>
-          <a
-            href="/hubungikami"
-            class="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"
-          >
-            Hubungi Kami
-          </a>
-        </li>
-      </ul>
-      <ul class="items-center hidden space-x-8 lg:flex">
-        <li>
-          <a
-            href="/"
-            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-[2.5px] text-black bg-yellow-400 transition duration-200 rounded shadow-md hover:bg-white focus:shadow-outline focus:outline-none"
-          >
-            MULA
-          </a>
-        </li>
-      </ul>
-  </div>
+<nav>
+  <Navbar client:load />
 </nav>
