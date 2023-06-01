@@ -10,6 +10,8 @@ layout: "../../layouts/BlogPostLayout.astro"
 
 author: Aizuddin
 date: January 10, 2023
+
+category: Modul 2
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut est eget felis hendrerit pharetra. Aliquam ac dolor a est lacinia vestibulum. Fusce sit amet massa sagittis, finibus massa ut, egestas quam. Donec mauris enim, luctus a eros non, facilisis blandit mauris. Nullam quis turpis at lacus cursus mollis quis eget urna. Donec interdum suscipit nulla, ac accumsan ante facilisis nec. Nunc eu libero lacinia, ultrices augue id, aliquam mauris. Sed in dignissim nisl. Nullam malesuada est vitae varius commodo. Maecenas a nisi vitae mauris iaculis commodo. Aliquam dolor felis, tempus at imperdiet non, pulvinar a risus. Maecenas vehicula non quam sit amet cursus.

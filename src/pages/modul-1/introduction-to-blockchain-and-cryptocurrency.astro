@@ -1,0 +1,72 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Sidebar from "./Sidebar.jsx"
+import "../../styles/style.css"
+
+---
+
+<MainLayout title="Introduction to Blockchain and Cryptocurrency" >
+    <div class="text-white lg:px-20 mx-auto lg:mt-5 m:max-w-xl md:max-w-full lg:max-w-screen-xl lg:flex lg:flex-row  ">
+        <Sidebar client:load />
+        <div class="mx-auto w-full z-0">
+          <div>
+            <h1 class="text-2xl mt-5 ml-5 font-semibold">
+                Module 1: Introduction to Blockchain and Cryptocurrency
+            </h1>
+          </div>
+          <div class="mx-5 mt-10">
+            <div class="containerVideo aspect-w-16 aspect-h-9">
+              <iframe
+                class="responsive-iframe"
+                src="https://www.youtube.com/embed/zEA3cbJI8io?start=526&end=614"
+                title="Pengenalan Blockchain"
+                
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                
+              ></iframe>
+            </div>
+          </div>
+          <div class="mx-5 my-10 ">
+            <p>Blockchain ini guna hanya untuk duit ke? No.</p>
+            <br></br>
+            <p>
+              Sebenarnya blockchain hanya konsep. Dia bukan ‘trademark’ dia bukan
+              jenama. Dia bukannya ‘blockchain trademark’, bukan ‘paypal
+              trademark’. Bukan macam itu. Dia hanya konsep. Sebenarnya apa sahaja
+              data boleh disimpan di atas blockchain?
+            </p>
+            <br />
+            <p>
+              {" "}
+              Contoh. Tahukah kita? Kita punya ‘Covid Vaccination Record’ direkod
+              di atas *Blockchain*? Cumanya ini yang kita panggil sebagai private
+              Blockchain.
+            </p>
+            <br />
+            <p>
+              *Private blockchain* bermaksud, dia punya ‘validator’ adalah terhad
+              kepada beberapa orang. Dalam kes ini, maknanya syarikat ‘Pfizer’
+              syarikat Sinovac, KKM, pengedar-pengedar tempatan, dan juga kita
+              sebagai pengguna.
+            </p>
+            <br />
+            <p>
+              So, semua orang boleh tengok rekod itu secara bersama, tapi dia
+              tidak buka secara umum kepada luar. Pendidikan? Ada. ‘MyBlockCert’
+              dekat Unisza. Sekarang ini semua degree yang dikeluarkan oleh
+              Unisza, Degree, Master, PHD direkod di atas blockchain. Cuma namanya
+              private blockchain.
+            </p>
+            <br />
+            <p>
+              Rekod pilihan raya? Banyak. Kalau kita tengok pada hari ini, banyak
+              orang boleh buat ‘validate’. Boleh buat proposal di dalam blockchain
+              untuk mengundi. Even banyak universiti pun sekarang buat pilihan
+              raya kampus menggunakan blockchain dan of course yang kita bincang
+              pada hari ini adalah rekod kewangan yang kita panggil sebagai kripto
+              assets dan juga ‘Crypto Currency’.
+            </p>
+          </div>
+        </div>
+      </div>
+</MainLayout>

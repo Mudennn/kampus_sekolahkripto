@@ -12,8 +12,8 @@ const Navbar = () => {
             <img src={Logo} alt="" className="lg:w-32 w-20" />
           </a>
           <ul className=" items-center hidden space-x-8 lg:flex">
-            {navData.map((nav) => (
-              <li>
+            {navData.map((nav, i) => (
+              <li key={i}>
                 <a
                   href={nav.path}
                   className="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"

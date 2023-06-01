@@ -7,10 +7,10 @@ const navData = [
         name : "Ama",
         path : "/ama/",
     },
-    {
-        name : "Blog",
-        path : "/blog/",
-    },
+    // {
+    //     name : "Blog",
+    //     path : "/blog/",
+    // },
     {
         name : "Tentang Kami",
         path : "/tentangkami/",

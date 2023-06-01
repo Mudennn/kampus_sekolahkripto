@@ -1,5 +1,7 @@
 ---
+import { slugify } from "../js/utils";
 import MainLayout from "./MainLayout.astro";
+
 
 interface Props {
   frontmatter: {
@@ -10,6 +12,7 @@ interface Props {
     video: string;
     author: string;
     date: string;
+    category:string;
   };
 }
 
@@ -19,6 +22,7 @@ const { frontmatter } = Astro.props as Props;
 <MainLayout title={frontmatter.title}>
   <div class="max-w-screen-md mx-auto mt-8">
     <!-- Heading Title  -->
+    <!-- <a href={`/module/${slugify(frontmatter.category)}`}>{frontmatter.category}</a> -->
     <h1 class="font-bold text-2xl text-white">{frontmatter.title}</h1>
     <div class="flex items-center text-gray-500 mt-4 divide-x divide-gray-500">
       <!-- Author  -->
@@ -37,7 +41,7 @@ const { frontmatter } = Astro.props as Props;
             d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
           ></path>
         </svg>
-
+        
         <p class="text-sm">{frontmatter.author}</p>
       </div>
       <!-- Date publish  -->

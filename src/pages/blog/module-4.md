@@ -9,6 +9,8 @@ video: "https://www.youtube.com/embed/zEA3cbJI8io?start=526&end=614"
 
 author: Aizuddin
 date: January 20, 2023
+
+category: Modul 1
 ---
 
 
