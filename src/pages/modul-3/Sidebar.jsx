@@ -20,8 +20,8 @@ const Sidebar = () => {
           <h2 className="hidden lg:block lg:text-xl font-semibold tracking-wide text-yellow-400">Modul 3</h2>
           <hr className="hidden lg:block my-2"/>
           {menus.map((menu, i) => (
-            <nav>
-              <ul key={i}>
+            <nav key={i}>
+              <ul>
                 <li className=" hidden lg:block mt-3">
                   <a
                     href={menu.path}
