@@ -6,32 +6,32 @@ import moduleData from "../data/moduleData.js";
 //Page list modul yang ada
 const CardModul = () => {
   return (
-    <div class=" py-10 px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 ">
-      <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18 ">
-        <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+    <div className=" px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 ">
+      <div className="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18 ">
+        <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
           {moduleData.map((data, i) => (
             <div
-              class="card cursor-pointer overflow-hidden bg-gray-300 bg-opacity-20 shadow-lg rounded-lg "
+              className="card cursor-pointer overflow-hidden bg-gray-300 bg-opacity-20 shadow-lg rounded-lg "
               key={i}
             >
               <div>
                 <a href={data.path}>
                   <img
                     src={data.image}
-                    class=" w-full rounded-md object-cover aspect-square"
+                    className=" w-full rounded-md object-cover sm:aspect-video md:aspect-square"
                     alt={data.name}
                   />
                 </a>
-                <div class="p-5 ">
-                  <p class="mb-1 font-bold text-white tracking-wide uppercase">
+                <div className="p-5 ">
+                  <p className="mb-1 font-bold text-white tracking-wide uppercase">
                     {data.name}
                   </p>
-                  <div class="flex items-center justify-start gap-2 mt-auto">
+                  <div className="flex items-center justify-start gap-2 mt-auto">
                     <a
-                      class="group text-yellow-400 transition-all duration-300 ease-in-out"
+                      className="group text-yellow-400 transition-all duration-300 ease-in-out"
                       href={data.path}
                     >
-                      <span class=" flex items-center gap-2 bg-left-bottom bg-gradient-to-r from-yellow-400 to-yellow-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                      <span className=" flex items-center gap-2 bg-left-bottom bg-gradient-to-r from-yellow-400 to-yellow-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                         Mula Belajar{" "}
                         <span>
                           <svg
