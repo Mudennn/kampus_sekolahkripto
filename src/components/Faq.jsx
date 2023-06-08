@@ -13,7 +13,7 @@ const Item = ({ title, children }) => {
           className="flex items-center justify-between w-full p-4 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <p className="text-lg font-medium">{title}</p>
+          <p className="sm:text-sm md:text-lg text-left font-medium">{title}</p>
           <div className="flex items-center justify-center w-8 h-8 border rounded-full">
             <svg
               viewBox="0 0 24 24"
@@ -42,77 +42,58 @@ const Item = ({ title, children }) => {
     );
   };
   
-const Faq = () => {
+const FaqCard = () => {
     return (
-      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-          <div class="flex flex-col mb-16 sm:text-center">
+      <div className="container flex flex-col justify-center p-4 mx-auto md:p-8 px-4 max-w-7xl sm:px-6 md:px-12 lg:px-24">
+       
          < p
-      class="p-2 text-sm font-medium tracking-wider text-center uppercase text-gray-400"
+      className="p-2 text-sm font-medium tracking-wider text-center uppercase text-gray-400"
     >
       Mulakan Dengan Asas
     </p>
     <h2
-      class="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl text-white"
+      className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl text-white"
     >
       Soalan-soalan Lazim
     </h2>
-            {/* <div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
-              <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
-                <span class="relative inline-block">
-                  <svg
-                    viewBox="0 0 52 24"
-                    fill="currentColor"
-                    class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-white lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-                  >
-                    <defs>
-                      <pattern
-                        id="ec5d8ef5-b853-4714-b94f-df28ec98eeb7"
-                        x="0"
-                        y="0"
-                        width=".135"
-                        height=".30"
-                      >
-                        <circle cx="1" cy="1" r=".7" />
-                      </pattern>
-                    </defs>
-                    <rect
-                      fill="url(#ec5d8ef5-b853-4714-b94f-df28ec98eeb7)"
-                      width="52"
-                      height="24"
-                    />
-                  </svg>
-                  <span class="relative">The</span>
-                </span>{' '}
-                quick, brown fox jumps over a lazy dog
-              </h2>
-              <p class="text-base text-white md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque rem aperiam, eaque ipsa quae.
-              </p>
-            </div> */}
-          </div>
-          <div class="space-y-4 text-white">
-            <Item title="The quick, brown fox jumps over a lazy dog?">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
+            
+          
+          <div className="space-y-4 text-white">
+            <Item title="1. Apakah blockchain?">
+            Blockchain adalah teknologi yang membolehkan transaksi digital
+          disimpan dan disahkan secara sejagat tanpa memerlukan pihak ketiga.
             </Item>
-            <Item title="The first mate and his Skipper too will do?">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
+            <Item title="2. Siapa yang boleh mendaftar untuk platform pendidikan ini?">
+            Siapa saja yang berminat untuk mempelajari lebih lanjut tentang
+          blockchain boleh mendaftar dan menggunakan platform kami.
             </Item>
-            <Item title="Is the Space Pope reptilian!?">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
+            <Item title="3. Adakah saya perlu mempunyai pengetahuan asas tentang blockchain?">
+            Tidak, platform pendidikan kami direka untuk semua orang, termasuk
+          mereka yang baru berjinak-jinak dengan blockchain.
             </Item>
-            <Item title="How much money you got on you?">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
+            <Item title="4. Bagaimana saya boleh memulakan pembelajaran saya?">
+            Anda hanya perlu mendaftar untuk akaun percuma, dan kemudian anda
+          boleh mula menjelajahi modul pendidikan kami.
+            </Item>
+            <Item title="5. Adakah saya akan mendapat sijil setelah menamatkan kursus?">
+            Ya, anda akan menerima sijil penyertaan setelah anda menamatkan modul
+          pendidikan.
+            </Item>
+            <Item title="6. Bolehkah saya belajar pada bila-bila masa?">
+            Ya, platform pendidikan kami 100% online dan boleh diakses pada
+          bila-bila masa yang sesuai dengan anda.
+            </Item>
+            <Item title="7. Apakah kosnya untuk menggunakan platform ini?">
+            Platform pendidikan blockchain ini 100% percuma. Anda boleh belajar
+          dan mendapatkan manfaat tanpa sebarang kos.
+            </Item>
+            <Item title="8. Apakah bahasa pengajaran di platform ini?">
+            Pengajaran di platform ini sepenuhnya dalam Bahasa Melayu.
             </Item>
           </div>
         </div>
-      </div>
+      
     );
   };
 
-  export default Faq
+  export default FaqCard

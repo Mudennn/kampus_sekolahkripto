@@ -40,7 +40,7 @@ const CardModul = () => {
                             viewBox="0 0 24 24"
                             strokeWidth={1.5}
                             stroke="currentColor"
-                            class="w-3.5 h-3.5"
+                            className="w-3.5 h-3.5"
                           >
                             <path
                               strokeLinecap="round"
