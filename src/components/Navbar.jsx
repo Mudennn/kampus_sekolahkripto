@@ -57,8 +57,8 @@ const Navbar = () => {
             {isMenuOpen && (
               <div className="absolute top-0 left-0 w-full z-20">
                 <div className="p-5 bg-white border rounded shadow-sm">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
+                  <div className="flex items-center justify-end mb-4">
+                    {/* <div>
                       <a href="/" className="inline-flex items-center">
                         <img
                           src={Logo}
@@ -66,7 +66,7 @@ const Navbar = () => {
                           className="w-24"
                         />
                       </a>
-                    </div>
+                    </div> */}
                     <div>
                       <button
                         aria-label="Close Menu"
@@ -89,7 +89,7 @@ const Navbar = () => {
                         <li>
                           <a
                             href={nav.path}
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-yellow-400 hover:text-black"
                           >
                             {nav.name}
                           </a>

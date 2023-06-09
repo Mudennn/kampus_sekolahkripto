@@ -13,7 +13,8 @@ const Item = ({ title, children }) => {
           className="flex items-center justify-between w-full p-4 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <p className="sm:text-sm md:text-lg text-left font-medium">{title}</p>
+          <p className="sm:text-sm md:text-lg text-left font-medium ">{title}</p>
+          <div>
           <div className="flex items-center justify-center w-8 h-8 border rounded-full">
             <svg
               viewBox="0 0 24 24"
@@ -31,6 +32,7 @@ const Item = ({ title, children }) => {
                 strokeLinejoin="round"
               />
             </svg>
+          </div>
           </div>
         </button>
         {isOpen && (
