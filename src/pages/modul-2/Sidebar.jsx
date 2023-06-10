@@ -37,12 +37,26 @@ const Sidebar = () => {
           {/* Topik Button  */}
           <div className="lg:hidden flex justify-start ">
             <button
-              className="p-2 transition duration-200 rounded focus:outline-none focus:shadow-outline"
+              className="p-2 transition duration-200 rounded focus:outline-none focus:shadow-outline border"
               onClick={() => setIsMenuOpen(true)}
             >
               <div className="flex items-center">
                 <span className="md:text-xl sm:text-md">Topik</span>{" "}
                 {/* <RiArrowDropDownLine className="text-3xl" /> */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
               </div>
             </button>
 
@@ -60,6 +74,20 @@ const Sidebar = () => {
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {/* <RiCloseFill className="text-gray-600 text-3xl" /> */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-6 h-6"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
                       </button>
                     </div>
                   </div>

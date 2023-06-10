@@ -35,7 +35,7 @@ const Navbar = () => {
           </ul>
           <div className="lg:hidden">
             <button
-              className="p-2 -mr-1 ease-in-out duration-500 rounded focus:outline-none focus:shadow-outline"
+              className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
               onClick={() => setIsMenuOpen(true)}
             >
               <svg className="w-5 text-white" viewBox="0 0 24 24">
