@@ -35,7 +35,7 @@ const Navbar = () => {
           </ul>
           <div className="lg:hidden">
             <button
-              className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
+              className="p-2 -mr-1 ease-in-out duration-500 rounded focus:outline-none focus:shadow-outline"
               onClick={() => setIsMenuOpen(true)}
             >
               <svg className="w-5 text-white" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ const Navbar = () => {
             {/* Mobile menu  */}
             {isMenuOpen && (
               <div className="absolute top-0 left-0 w-full z-20">
-                <div className="p-5 bg-white border rounded shadow-sm">
+                <div className="p-5 bg-white border rounded shadow-sm ">
                   <div className="flex items-center justify-end mb-4">
                     {/* <div>
                       <a href="/" className="inline-flex items-center">
