@@ -5,8 +5,9 @@ import navData from "../data/navData";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div>
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20 relative">
+    
+      // <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20 relative">
+      <div className="px-4 py-5 mx-auto md:px-24 lg:px-20 relative">
         <div className="relative flex items-center justify-between">
           <a href="/" className="inline-flex items-center">
             <img src={Logo} alt="" className="lg:w-32 w-20" />
@@ -27,7 +28,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black bg-yellow-400 transition duration-200 rounded shadow-md  hover:bg-white focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black bg-yellow-400 transition-color duration-200 rounded shadow-md  hover:bg-white focus:shadow-outline focus:outline-none"
               >
                 Log Masuk
               </a>
@@ -35,7 +36,7 @@ const Navbar = () => {
           </ul>
           <div className="lg:hidden">
             <button
-              className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
+              className="p-2 -mr-1 transition-transform ease-in duration-75 rounded focus:outline-none focus:shadow-outline"
               onClick={() => setIsMenuOpen(true)}
             >
               <svg className="w-5 text-white" viewBox="0 0 24 24">
@@ -71,7 +72,7 @@ const Navbar = () => {
                       <button
                         aria-label="Close Menu"
                         title="Close Menu"
-                        className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        className="p-2 -mt-2 -mr-2 transition-transform ease-in duration-75 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -111,8 +112,10 @@ const Navbar = () => {
             )}
           </div>
         </div>
+
+        
       </div>
-    </div>
+    
   );
 };
 

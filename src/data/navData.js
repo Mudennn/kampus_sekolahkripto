@@ -12,6 +12,10 @@ const navData = [
         path : "/blog/",
     },
     {
+        name : "Buku WAGMI",
+        path : "/kedai/",
+    },
+    {
         name : "Tentang Kami",
         path : "/tentangkami/",
     },
