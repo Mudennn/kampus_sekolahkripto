@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Logo from "/assets/Kampus.png";
 import navData from "../data/navData";
-import {NavLink} from "react-router-dom"
 
 
 const Navbar = () => {
