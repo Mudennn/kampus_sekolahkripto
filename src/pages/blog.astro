@@ -2,51 +2,59 @@
 import Card from "../components/Card.astro";
 import { slugify } from "../js/utils";
 import MainLayout from "../layouts/MainLayout.astro";
+import BG from "/assets/Mask-group.png";
 
-interface Frontmatter{
-  title: string,
-  slug: string,
-  thumbnail: string,
-  subheading: string,
-  category: string,
+interface Frontmatter {
+  title: string;
+  slug: string;
+  thumbnail: string;
+  subheading: string;
+  category: string;
 }
 
-
-const posts = await Astro.glob<Frontmatter>('./blog/*.md')
+const posts = await Astro.glob<Frontmatter>("./blog/*.md");
 ---
 
 <MainLayout title="Blog">
   <div class="p-4">
+    <img
+      src={BG}
+      alt="MySekolah Kripto"
+      class="absolute -mt-[15%] rotate-180 w-full left-0 lg:block hidden -z-20"
+    />
+    <img
+      src={BG}
+      alt="MySekolah Kripto"
+      class="absolute mt-[100%]rotate-180 left-0 h-[550px] sm:block md:hidden -z-20"
+    />
     <h2 class="lg:text-3xl text-3xl font-bold text-center text-white">Blog</h2>
     <h3 class="text-sm lg:text-base py-2 text-center text-gray-400 mt-2">
       Pilih laluan anda untuk mempelajari asas web3!
-    </>
+    </h3>
   </div>
-  
-  <div class=" px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
+
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
     <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">
       <div
         class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
-      > 
-       {posts.map((post) => (
-      <Card
-          title={post.frontmatter.title}
-          subheading={post.frontmatter.subheading}  
-          href={post.url}
-          thumbnail={post.frontmatter.thumbnail}
-        />
-      ))} 
-      
-        
-    
+      >
+        {
+          posts.map((post) => (
+            <Card
+              title={post.frontmatter.title}
+              subheading={post.frontmatter.subheading}
+              href={post.url}
+              thumbnail={post.frontmatter.thumbnail}
+            />
+          ))
+        }
+      </div>
     </div>
+
+    <!-- baru tukar - category  -->
+    <!-- category={`/module/${slugify(post.frontmatter.category)}`}  -->
   </div>
 
-  <!-- baru tukar - category  -->
-   <!-- category={`/module/${slugify(post.frontmatter.category)}`}  -->
-
-</MainLayout>
-
-
-<!-- // description={post.rawContent().slice(0, 100)}  
+  <!-- // description={post.rawContent().slice(0, 100)}  
 // ={`${post.rawContent().slice(0, 100)}...`} -->
+</MainLayout>

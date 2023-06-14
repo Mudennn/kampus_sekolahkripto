@@ -57,7 +57,7 @@ const Navbar = () => {
             </button>
             {/* Mobile menu  */}
             {isMenuOpen && (
-              <div className="absolute top-0 left-0 w-full z-20">
+              <div className=" top-0 left-0 w-full h-screen z-20 fixed transition duration-75 ease-in">
                 <div className="p-5 bg-white border rounded shadow-sm ">
                   <div className="flex items-center justify-end mb-4">
                     {/* <div>
