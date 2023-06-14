@@ -43,7 +43,7 @@ import BG from "/assets/Mask-group.png";
                 alt="MySekolahKripto"
                 src={Image}
               /> -->
-              <div class="container">
+              
                 <div class="slider-wrapper">
                   <div class="slider">
                     <img
@@ -67,7 +67,7 @@ import BG from "/assets/Mask-group.png";
                     <a href="#slide-2"></a>
                     <a href="#slide-3"></a>
                   </div>
-                </div>
+                
           
             </div>
           </div>
@@ -91,9 +91,7 @@ import BG from "/assets/Mask-group.png";
 </MainLayout>
 
 <style>
-  .container::-webkit-scrollbar{
-    display:none;
-  }
+  
 
 .slider-wrapper {
   position:relative;
@@ -108,7 +106,13 @@ import BG from "/assets/Mask-group.png";
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
   border-radius: 0.5rem;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+.slider::-webkit-scrollbar{
+    display:none;
+  }
 
 .slider img {
   flex: 1 0 100%;
@@ -126,9 +130,6 @@ import BG from "/assets/Mask-group.png";
   z-index: 1;
 }
 
-.sllider-nav::-webkit-scrollbar{
-    display:none;
-  }
 
 .slider-nav a{
   width: 0.5rem;
@@ -139,9 +140,6 @@ import BG from "/assets/Mask-group.png";
   transition: opacity ease 250ms;
 }
 
-.slider-nav a::-webkit-scrollbar{
-    display:none;
-  }
 
 .slider-nav a:hover{
   opacity: 1;
