@@ -1,6 +1,9 @@
 ---
 import BG from "/assets/Mask-group.png";
 import CardModul from "../components/CardModul.jsx";
+import "../styles/style.css";
+
+import moduleData from "../data/moduleData.js";
 ---
 
 <section>
@@ -28,7 +31,29 @@ import CardModul from "../components/CardModul.jsx";
         Pilih laluan anda untuk mempelajari asas web3!
       </p>
     </div>
-    <CardModul/>
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
+      <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">
+        <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+          {
+            moduleData.slice(0, 3).map((data) => (
+              <div class="card cursor-pointer overflow-hidden bg-gray-300 bg-opacity-20 shadow-lg rounded-lg ">
+                <div>
+                  <img
+                    src={data.image}
+                    class=" w-full rounded-md object-cover sm:aspect-video md:aspect-square"
+                    alt={data.name}
+                  />
+
+                  <div class="p-5 ">
+                    <p class="mb-1 text-white font-medium">{data.name}</p>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
     <div class="flex justify-center w-full">
       <a href="/modul" class="button">Lihat Semua Laluan</a>
     </div>
