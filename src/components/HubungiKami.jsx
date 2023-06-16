@@ -101,7 +101,7 @@ const HubungiKami = () => {
           <div class="relative rounded-lg  bg-gray-300 bg-opacity-20 p-8 shadow-lg sm:p-12">
             <form>
               <div class="mb-6">
-                <label htmlFor="" className="text-white">Nama Penuh</label>
+                <label htmlFor="" className="text-white">Nama Penuh <span className="text-red-500">*</span></label>
                 <input
                   type="text"
                   placeholder="Ali bin Abdul"
@@ -109,7 +109,7 @@ const HubungiKami = () => {
                 />
               </div>
               <div class="mb-6">
-              <label htmlFor="" className="text-white">Alamat Email</label>
+              <label htmlFor="" className="text-white">Alamat Email <span className="text-red-500">*</span></label>
                 <input
                   type="email"
                   placeholder="admin@kampussekolahkripto.com"
@@ -117,7 +117,7 @@ const HubungiKami = () => {
                 />
               </div>
               <div class="mb-6">
-              <label htmlFor="" className="text-white">No Telefon</label>
+              <label htmlFor="" className="text-white">No Telefon <span className="text-red-500">*</span></label>
                 <input
                   type="text"
                   placeholder="0162345678"
@@ -125,7 +125,7 @@ const HubungiKami = () => {
                 />
               </div>
               <div class="mb-6">
-              <label htmlFor="" className="text-white">Mesej</label>
+              <label htmlFor="" className="text-white">Mesej <span className="text-red-500">*</span></label>
                 <textarea
                   rows="6"
                   placeholder="Mesej Anda"
