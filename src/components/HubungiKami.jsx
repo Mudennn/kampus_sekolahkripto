@@ -4,9 +4,7 @@ import BG from "/assets/Mask-group.png";
 const HubungiKami = () => {
   return (
     <section >
-      <div class="flex flex-wrap items-center mx-auto max-w-7xl">
-        <div class="flex flex-col items-start lg:mt-12 mb-16 lg:flex-grow lg:w-1/2 lg:pr-6 xl:pr-24 md:mb-0 xl:mt-0 z-10">
-        <img
+      <img
       src={BG}
       alt="MySekolah Kripto"
       class="absolute -mt-[15%] rotate-180 w-full left-0 lg:block hidden -z-20"
@@ -16,6 +14,8 @@ const HubungiKami = () => {
       alt="MySekolah Kripto"
       class="absolute mt-[100%]rotate-180 left-0 h-[550px] sm:block md:hidden -z-20"
     />
+      <div class="relative flex flex-wrap items-center mx-auto max-w-7xl">
+        <div class="flex flex-col items-start lg:mt-12 mb-16 lg:flex-grow lg:w-1/2 lg:pr-6 xl:pr-24 md:mb-0 xl:mt-0 z-10">
           <h2 class="text-white lg:mb-6 mb-2 text-[28px]  font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
             Hubungi Kami
           </h2>
