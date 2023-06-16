@@ -36,7 +36,7 @@ const Item = ({ title, children }) => {
           </div>
         </button>
         {isOpen && (
-          <div className="p-4 pt-0 motion-reduce:transition-none">
+          <div className="p-4 pt-0 ">
             <p className="textwhite">{children}</p>
           </div>
         )}

@@ -1,11 +1,22 @@
 import React from "react";
+import BG from "/assets/Mask-group.png";
 
 const HubungiKami = () => {
   return (
-    <section class="">
+    <section >
       <div class="flex flex-wrap items-center mx-auto max-w-7xl">
-        <div class="flex flex-col items-center lg:items-start lg:mt-12 mb-16 lg:flex-grow lg:w-1/2 lg:pr-6 xl:pr-24 md:mb-0 xl:mt-0 z-10">
-          <h2 class="text-white mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+        <div class="flex flex-col items-start lg:mt-12 mb-16 lg:flex-grow lg:w-1/2 lg:pr-6 xl:pr-24 md:mb-0 xl:mt-0 z-10">
+        <img
+      src={BG}
+      alt="MySekolah Kripto"
+      class="absolute -mt-[15%] rotate-180 w-full left-0 lg:block hidden -z-20"
+    />
+    <img
+      src={BG}
+      alt="MySekolah Kripto"
+      class="absolute mt-[100%]rotate-180 left-0 h-[550px] sm:block md:hidden -z-20"
+    />
+          <h2 class="text-white lg:mb-6 mb-2 text-[28px]  font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
             Hubungi Kami
           </h2>
           <p class="text-white mb-9 text-base leading-relaxed">
@@ -59,7 +70,7 @@ const HubungiKami = () => {
             </div>
           </div>
           {/* Alamat Emel  */}
-          <div class="mb-8 flex w-full  max-w-[370px] text-white">
+          <div class="lg:mb-8 mb-0 flex w-full  max-w-[370px] text-white">
             <div class="mr-6 flex h-[60px] max-w-[60px] w-full  items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,40 +98,44 @@ const HubungiKami = () => {
 
         {/* Form  */}
         <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl mt-0 md:mt-10">
-          <div class="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
+          <div class="relative rounded-lg  bg-gray-300 bg-opacity-20 p-8 shadow-lg sm:p-12">
             <form>
               <div class="mb-6">
+                <label htmlFor="" className="text-white">Nama Penuh</label>
                 <input
                   type="text"
-                  placeholder="Your Name"
-                  class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  placeholder="Ali bin Abdul"
+                  class="placeholder:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full rounded  py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                 />
               </div>
               <div class="mb-6">
+              <label htmlFor="" className="text-white">Alamat Email</label>
                 <input
                   type="email"
-                  placeholder="Your Email"
-                  class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  placeholder="admin@kampussekolahkripto.com"
+                  class="placeholder:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full rounded  py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                 />
               </div>
               <div class="mb-6">
+              <label htmlFor="" className="text-white">No Telefon</label>
                 <input
                   type="text"
-                  placeholder="Your Phone"
-                  class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  placeholder="0162345678"
+                  class="placeholder:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full rounded  py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                 />
               </div>
               <div class="mb-6">
+              <label htmlFor="" className="text-white">Mesej</label>
                 <textarea
                   rows="6"
-                  placeholder="Your Message"
-                  class="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  placeholder="Mesej Anda"
+                  class="placeholder:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full resize-none rounded py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                 ></textarea>
               </div>
               <div>
                 <button
                   type="submit"
-                  class=" w-full text-base font-semibold py-3 px-5 rounded-lg transition duration-200 border-2 border-yellow-400 bg-yellow-400 text-white hover:border-white hover:bg-black hover:text-white"
+                  class=" w-full text-base font-semibold py-3 px-5 rounded-lg transition-colors duration-200  bg-yellow-400 text-black hover:bg-black hover:text-white"
                 >
                   Send Message
                 </button>
