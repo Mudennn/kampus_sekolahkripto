@@ -1,31 +1,56 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import BG from "/assets/Mask-group.png";
+import emailjs from '@emailjs/browser';
+
+const Result = () => {
+  return(
+    <p className="text-white mt-2">Mesej anda telah dihantar! Kami akan hubungi anda secepat yang mungkin.</p>
+  )
+}
 
 const HubungiKami = () => {
+  const form = useRef();
+  const [result, showResult] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_v07o1an', 'template_xxd0nd7', form.current, 'qKMHNpMKFtCdfBtIn')
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent");
+          alert
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+      showResult(true);
+  };
+
   return (
     <section >
       <img
       src={BG}
       alt="MySekolah Kripto"
-      class="absolute -mt-[15%] rotate-180 w-full left-0 lg:block hidden -z-20"
+      className="absolute -mt-[15%] rotate-180 w-full left-0 lg:block hidden -z-20"
     />
     <img
       src={BG}
       alt="MySekolah Kripto"
-      class="absolute mt-[100%]rotate-180 left-0 h-[550px] sm:block md:hidden -z-20"
+      className="absolute mt-[100%]rotate-180 left-0 h-[550px] sm:block md:hidden -z-20"
     />
-      <div class="relative flex flex-wrap items-center mx-auto max-w-7xl">
-        <div class="flex flex-col items-start lg:mt-12 mb-16 lg:flex-grow lg:w-1/2 lg:pr-6 xl:pr-24 md:mb-0 xl:mt-0 z-10">
-          <h2 class="text-white lg:mb-6 mb-2 text-[28px]  font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+      <div className="relative flex flex-wrap items-center mx-auto max-w-7xl">
+        <div className="flex flex-col items-start lg:mt-12 mb-16 lg:flex-grow lg:w-1/2 lg:pr-6 xl:pr-24 md:mb-0 xl:mt-0 z-10">
+          <h2 className="text-white lg:mb-6 mb-2 text-[28px]  font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
             Hubungi Kami
           </h2>
-          <p class="text-white mb-9 text-base leading-relaxed">
+          <p className="text-white mb-9 text-base leading-relaxed">
             Maklumat lanjut atau ingin tahu sebarang penyertaan boleh hubungi
             kami. Kami sentiasa bersedia membantu anda
           </p>
           {/* Lokasi kami  */}
-          <div class="mb-8 flex w-full max-w-[370px] text-white">
-            <div class=" mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden sm:h-[70px] sm:max-w-[70px]">
+          <div className="mb-8 flex w-full max-w-[370px] text-white">
+            <div className=" mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden sm:h-[70px] sm:max-w-[70px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -41,14 +66,14 @@ const HubungiKami = () => {
                 />
               </svg>
             </div>
-            <div class="w-full">
-              <h4 class="text-dark mb-1 text-xl font-bold">Lokasi Kami</h4>
-              <p class="text-body-color text-base">Selangor, Malaysia</p>
+            <div className="w-full">
+              <h4 className="text-dark mb-1 text-xl font-bold">Lokasi Kami</h4>
+              <p className="text-body-color text-base">Selangor, Malaysia</p>
             </div>
           </div>
           {/* No telefon  */}
-          <div class="mb-8 flex w-full max-w-[370px] text-white">
-            <div class="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
+          <div className="mb-8 flex w-full max-w-[370px] text-white">
+            <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -64,14 +89,14 @@ const HubungiKami = () => {
                 />
               </svg>
             </div>
-            <div class="w-full">
-              <h4 class="text-dark mb-1 text-xl font-bold">No. Telefon</h4>
-              <p class="text-body-color text-base">(+60) 12345678</p>
+            <div className="w-full">
+              <h4 className="text-dark mb-1 text-xl font-bold">No. Telefon</h4>
+              <p className="text-body-color text-base">(+60) 12345678</p>
             </div>
           </div>
           {/* Alamat Emel  */}
-          <div class="lg:mb-8 mb-0 flex w-full  max-w-[370px] text-white">
-            <div class="mr-6 flex h-[60px] max-w-[60px] w-full  items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
+          <div className="lg:mb-8 mb-0 flex w-full  max-w-[370px] text-white">
+            <div className="mr-6 flex h-[60px] max-w-[60px] w-full  items-center justify-center overflow-hidden rounded  sm:h-[70px] sm:max-w-[70px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -87,59 +112,61 @@ const HubungiKami = () => {
                 />
               </svg>
             </div>
-            <div class="w-full">
-              <h4 class="text-dark mb-1 text-xl font-bold">Alamat Emel</h4>
-              <p class="text-body-color text-base">
-                admin@kampussekolahkripto.com
+            <div className="w-full">
+              <h4 className="text-dark mb-1 text-xl font-bold">Alamat Emel</h4>
+              <p className="text-body-color text-base">
+              kampusmysekolahkripto@gmail.com
               </p>
             </div>
           </div>
         </div>
 
         {/* Form  */}
-        <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl mt-0 md:mt-10">
-          <div class="relative rounded-lg  bg-gray-300 bg-opacity-20 p-8 shadow-lg sm:p-12">
-            <form>
-              <div class="mb-6">
-                <label htmlFor="" className="text-white">Nama Penuh <span className="text-red-500">*</span></label>
+        <div className="w-full lg:max-w-lg lg:w-1/2 rounded-xl mt-0 md:mt-10">
+          <div className="relative rounded-lg  bg-gray-300 bg-opacity-20 p-8 shadow-lg sm:p-12">
+            <form ref={form} onSubmit={sendEmail}>
+              <div className="mb-6">
+                <label className="text-white">Nama Penuh <span className="text-red-500">*</span></label>
                 <input
-                  type="text"
+                  type="text" name="user_name" required
                   placeholder="Ali bin Abdul"
-                  class="placeholder:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full rounded  py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  className="placeholder:text-white focus:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full rounded  py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                 />
               </div>
-              <div class="mb-6">
-              <label htmlFor="" className="text-white">Alamat Email <span className="text-red-500">*</span></label>
+              <div className="mb-6">
+              <label  className="text-white">Alamat Email <span className="text-red-500">*</span></label>
                 <input
-                  type="email"
+                  type="email" name="user_email" required
                   placeholder="admin@kampussekolahkripto.com"
-                  class="placeholder:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full rounded  py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  className="placeholder:text-white focus:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full rounded  py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                 />
               </div>
-              <div class="mb-6">
-              <label htmlFor="" className="text-white">No Telefon <span className="text-red-500">*</span></label>
+              <div className="mb-6">
+              <label  className="text-white">No Telefon <span className="text-red-500">*</span></label>
                 <input
-                  type="text"
+                  type="phone" name="user_phone" required
                   placeholder="0162345678"
-                  class="placeholder:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full rounded  py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  className="placeholder:text-white focus:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full rounded  py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                 />
               </div>
-              <div class="mb-6">
-              <label htmlFor="" className="text-white">Mesej <span className="text-red-500">*</span></label>
+              <div className="mb-6">
+              <label  className="text-white">Mesej <span className="text-red-500">*</span></label>
                 <textarea
+                  name="message" required
                   rows="6"
                   placeholder="Mesej Anda"
-                  class="placeholder:text-white bg-gray-500 border-[f0f0f0] focus:border-primary w-full resize-none rounded py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  className="placeholder:text-white focus:text-white  bg-gray-500 border-[f0f0f0] focus:border-primary w-full resize-none rounded py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                 ></textarea>
               </div>
               <div>
                 <button
-                  type="submit"
-                  class=" w-full text-base font-semibold py-3 px-5 rounded-lg transition-colors duration-200  bg-yellow-400 text-black hover:bg-black hover:text-white"
+                  type="submit" value="Send"
+                  className=" w-full text-base font-semibold py-3 px-5 rounded-lg transition-colors duration-200  bg-yellow-400 text-black hover:bg-black hover:text-white"
                 >
-                  Send Message
+                  Hantar
                 </button>
               </div>
+              <div>{result ? <Result /> : null}</div>
             </form>
             
           </div>
