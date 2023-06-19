@@ -45,6 +45,7 @@ const posts = await Astro.glob<Frontmatter>("./blog/*.md");
               subheading={post.frontmatter.subheading}
               href={post.url}
               thumbnail={post.frontmatter.thumbnail}
+              // category={post.frontmatter.category}
             />
           ))
         }
