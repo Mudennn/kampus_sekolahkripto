@@ -9,9 +9,10 @@ thumbnail : /assets/tezos3.jpg
 layout: "../../layouts/BlogPostLayout.astro"
 
 author: J4nt4nCrypto
-date: January 16, 2023
+date: 2023-01-16
 
 category: Ethereum
+draft: false
 ---
 
 Ethereum Shanghai update, juga dikenali sebagai Ethereum 2.0 atau Serenity, ialah upgrade utama kepada Ethereum yang bertujuan untuk meningkatkan kebolehskalaan (scalability), keselamatan (security) dan kemampanannya (sustainability). Upgrade ini akan memperkenalkan mekanisme konsensus baharu yang dipanggil Proof of Stake (PoS), yang akan menggantikan mekanisme Proof of Work (PoW) semasa. Perubahan ini akan mempunyai beberapa faedah untuk pengguna tetap rangkaian Ethereum.

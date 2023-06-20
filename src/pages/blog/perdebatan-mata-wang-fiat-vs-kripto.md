@@ -9,9 +9,11 @@ thumbnail : /assets/tezos2.jpg
 layout: "../../layouts/BlogPostLayout.astro"
 
 author: Ilham Qayyum, ybilham.eth
-date: Oct 8, 2022
+date: 2022-10-08
 
-category: Modul 2
+category: Kripto
+
+draft: false
 ---
 
 Apabila kita berada dalam keadaan pasaran mata wang kripto yang sedang menuju ke puncak, terdapat ramai pemilik kripto berasa gembira seolah-olah mata wang fiat ini akan hilang dan pupus diganti kripto. Pertama sekali, kita mesti fahamkan apa definisi sebenar fiat, kripto dan mata wang.

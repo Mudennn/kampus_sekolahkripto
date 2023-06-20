@@ -1,5 +1,5 @@
 ---
-import { slugify } from "../js/utils";
+import { slugify, formatDate } from "../js/utils";
 import MainLayout from "./MainLayout.astro";
 
 
@@ -22,7 +22,7 @@ const { frontmatter } = Astro.props as Props;
 <MainLayout title={frontmatter.title}>
   <div class="max-w-screen-md mx-auto mt-8 px-5">
     <!-- Heading Title  -->
-    <!-- <a href={`/module/${slugify(frontmatter.category)}`}>{frontmatter.category}</a> -->
+    
     <h1 class="font-bold text-4xl text-white">{frontmatter.title}</h1>
     <div class="flex items-center text-white mt-4 divide-x divide-white">
       <!-- Author  -->
@@ -42,7 +42,8 @@ const { frontmatter } = Astro.props as Props;
           ></path>
         </svg>
         
-        <p class="text-sm">{frontmatter.author}</p>
+        <!-- <p class="text-sm">{frontmatter.author}</p> -->
+        <p class="text-sm"><a href={`author/${slugify(frontmatter.author)}/`}>{frontmatter.author}</a></p>
       </div>
       <!-- Date publish  -->
       <div class="flex items-center space-x-1 px-2">
@@ -60,7 +61,7 @@ const { frontmatter } = Astro.props as Props;
             d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
 
-        <p class="text-sm">{frontmatter.date}</p>
+        <p class="text-sm">{formatDate(frontmatter.date)}</p>
       </div>
     </div>
     <!-- Image or video  -->
@@ -77,9 +78,11 @@ const { frontmatter } = Astro.props as Props;
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>
     </div> -->
-    <div class="mt-4 text-white content">
+    <div class="mt-4 mb-6 text-white content">
       <slot />
     </div>
+    <!-- Category  -->
+    <small><a href={`category/${slugify(frontmatter.category)}/`} class="text-black bg-white p-2 rounded-md font-bold hover:bg-yellow-400 uppercase">{frontmatter.category}</a></small>
   </div>
 </MainLayout>
 

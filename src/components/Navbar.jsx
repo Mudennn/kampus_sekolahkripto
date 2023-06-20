@@ -3,6 +3,7 @@ import Logo from "/assets/Kampus.png";
 import navData from "../data/navData";
 
 
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
       <div className="px-4 py-5 mx-auto md:px-24 lg:px-20 relative">
         <div className="relative flex items-center justify-between">
           <a href="/" className="inline-flex items-center">
-            <img src={Logo} alt="" className="lg:w-32 w-20" />
+            <img src="/assets/Kampus.png" alt="" className="lg:w-32 w-20" />
           </a>
           <ul className=" items-center hidden space-x-8 lg:flex">
             {navData.map((nav, i) => (

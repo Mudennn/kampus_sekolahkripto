@@ -8,8 +8,10 @@ thumbnail : /assets/tezos1.jpg
 
 
 author: Mysekolahkripto
-date: Aug 2, 2022
+date: 2022-08-02
 category: Web 3, Blockchain, Matawang Kripto
+
+draft: false
 ---
 
 
