@@ -4,6 +4,9 @@ import { slugify } from "../js/utils";
 import MainLayout from "../layouts/MainLayout.astro";
 import BG from "/assets/Mask-group.png";
 
+// utils imports
+import {formatBlogPosts} from "../js/utils" 
+
 
 interface Frontmatter {
   title: string;
@@ -14,6 +17,10 @@ interface Frontmatter {
 }
 
 const posts = await Astro.glob<Frontmatter>("./blog/*.md");
+const formattedPosts = formatBlogPosts(posts);
+// const latestPosts = formatBlogPosts(posts, {
+  // limit: 3;
+// });
 ---
 
 <MainLayout title="Blog">
@@ -40,7 +47,7 @@ const posts = await Astro.glob<Frontmatter>("./blog/*.md");
         class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
       >
         {
-          posts.map((post) => (
+          formattedPosts.map((post) => (
             <Card
               title={post.frontmatter.title}
               subheading={post.frontmatter.subheading}

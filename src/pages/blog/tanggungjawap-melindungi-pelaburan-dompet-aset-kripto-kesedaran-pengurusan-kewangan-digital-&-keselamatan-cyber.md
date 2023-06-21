@@ -12,7 +12,7 @@ author: Mysekolahkripto
 date: 2023-05-08 
 category: Web 3, Blockchain, Matawang Kripto
 
-draft: true
+draft: false
 ---
 
 
