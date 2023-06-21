@@ -11,7 +11,7 @@ layout: "../../layouts/BlogPostLayout.astro"
 author: J4nt4nCrypto
 date: 2023-01-16
 
-category: Ethereum
+category: Blockchain
 draft: false
 ---
 
