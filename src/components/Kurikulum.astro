@@ -6,7 +6,7 @@ import "../styles/style.css";
 import moduleData from "../data/moduleData.js";
 ---
 
-<section>
+<section >
   <img
     src={BG}
     alt="MySekolah Kripto"
@@ -27,7 +27,7 @@ import moduleData from "../data/moduleData.js";
       <h3 class="lg:text-3xl text-3xl font-bold text-center text-white">
         Terokai Lalu Pembelajaran Kami
       </h3>
-      <p class="text-sm lg:text-base py-2 text-center text-gray-400 mt-2">
+      <p class="text-sm lg:text-base py-2 text-center text-jacarta-200 mt-2">
         Pilih laluan anda untuk mempelajari asas web3!
       </p>
     </div>
@@ -37,7 +37,7 @@ import moduleData from "../data/moduleData.js";
         <div class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
           {
             moduleData.slice(0, 3).map((data) => (
-              <div class="card cursor-pointer overflow-hidden bg-gray-300 bg-opacity-20 shadow-lg rounded-lg ">
+              <div class="card cursor-pointer overflow-hidden bg-[#131740] shadow-lg rounded-lg ">
                 <div>
                   <img
                     src={data.image}
@@ -56,7 +56,7 @@ import moduleData from "../data/moduleData.js";
       </div>
     </div>
     <div class="flex justify-center w-full">
-      <a href="/modul" class="button">Lihat Semua Laluan</a>
+      <a href="/modul" class="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">Lihat Semua Laluan</a>
     </div>
     <!-- <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
       <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">

@@ -19,7 +19,7 @@ const Navbar = () => {
               <li key={i}>
                 <a
                   href={nav.path}
-                  className="font-medium tracking-wide text-white hover:text-yellow-400 transition-colors duration-200"
+                  className="font-medium tracking-wide text-white hover:text-accent focus:text-accent transition-colors duration-200"
                 >
                   {nav.name}
                 </a>
@@ -30,7 +30,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black bg-yellow-400 transition-color duration-200 rounded shadow-md  hover:bg-white focus:shadow-outline focus:outline-none"
+                className="rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume"
               >
                 Log Masuk
               </a>

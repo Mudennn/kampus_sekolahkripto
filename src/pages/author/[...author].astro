@@ -14,14 +14,19 @@ export async function getStaticPaths(){
   return allAuthors.map((author) => {
     const authorPosts = formattedPosts.filter(
       (post) => post.frontmatter.author === author
+      
     );
+    
     return {
       params: { author: slugify(author) },
       props: {
         authorName: author,
         posts: authorPosts,
+        
       },
+      
     };
+    
   });
     
 }
@@ -37,6 +42,8 @@ interface Frontmatter {
 
 const { author } = Astro.params;
 const { posts, authorName } = Astro.props;
+
+// const posts = await Astro.glob<Frontmatter>("../blog/*.md");
 
 ---
 
@@ -63,7 +70,7 @@ const { posts, authorName } = Astro.props;
           <div
             class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
           >
-            {
+            <!-- {
               posts.map((post) => (
                 <Card
                   title={post.frontmatter.title}
@@ -74,7 +81,7 @@ const { posts, authorName } = Astro.props;
                  
                 />
               ))
-            }
+            } -->
           </div>
         </div>
     
