@@ -20,7 +20,7 @@ const VideoAma = () => {
         <h3 className=" lg:text-3xl text-3xl font-bold text-center text-white">
           Ask Me Anything Session!
         </h3>
-        <p className="text-sm lg:text-base py-2 text-center  text-gray-400 mt-2">
+        <p className="text-sm lg:text-base py-2 text-center  text-jacarta-200 mt-2">
           Sesi AMA yang pernah kami jalankan.
         </p>
       </div>
@@ -29,7 +29,7 @@ const VideoAma = () => {
         <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
           {ama.map((menu, i) => (
             <div key={i}>
-              <div className="card cursor-pointer overflow-hidden  bg-gray-300 bg-opacity-20 shadow-lg rounded-lg ">
+              <div className="card cursor-pointer overflow-hidden  bg-jacarta-700  shadow-lg rounded-lg ">
                 <img
                   src={menu.image}
                   className=" w-full rounded-md object-cover aspect-square"
@@ -42,9 +42,12 @@ const VideoAma = () => {
                   <div className="flex items-center justify-start ">
                     <button
                       onClick={() => changeContent(menu)}
-                      className="bg-yellow-400 text-black px-5 py-1 rounded-lg font-semibold text-sm"
+                      className="bg-accent text-white p-3 rounded-full font-semibold text-sm shadow-accent-volume transition-all hover:bg-accent-dark"
                     >
-                      Tonton
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+</svg>
+
                     </button>
                   </div>
                 </div>
