@@ -1,14 +1,12 @@
 ---
 title: 7 Perkara Yang Boleh Anda Lakukan Selepas Memuatkan Dompet Ballet Pertama Anda.
-subheading: Buku W.A.G.M.I
-slug: 7-perkara-yang-boleh-anda-lakukan-selepas-memuatkan-dompet-ballet-pertama-anda
-layout: "../../layouts/BlogPostLayout.astro"
-
-thumbnail : /assets/tezos1.jpg
-
-
+description: Buku W.A.G.M.I
 author: Mysekolahkripto
 date: 2023-05-31
+
+thumbnail : /assets/tezos1.jpg
+layout: "../../layouts/BlogPostLayout.astro"
+
 category: 
 - Kripto 
 - Web 3

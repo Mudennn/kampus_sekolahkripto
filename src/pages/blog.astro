@@ -1,6 +1,6 @@
 ---
+// import components
 import Card from "../components/Card.astro";
-import { slugify } from "../js/utils";
 import MainLayout from "../layouts/MainLayout.astro";
 import BG from "/assets/Mask-group.png";
 
@@ -36,7 +36,7 @@ const formattedPosts = formatBlogPosts(posts);
       class="absolute mt-[100%]rotate-180 left-0 h-[550px] sm:block md:hidden -z-20"
     />
     <h2 class="lg:text-3xl text-3xl font-bold text-center text-white">Blog</h2>
-    <h3 class="text-sm lg:text-base py-2 text-center text-gray-400 mt-2">
+    <h3 class="text-sm lg:text-base py-2 text-center text-jacarta-200 mt-2">
       Pilih laluan anda untuk mempelajari asas web3!
     </h3>
   </div>
@@ -59,11 +59,5 @@ const formattedPosts = formatBlogPosts(posts);
         }
       </div>
     </div>
-
-    <!-- baru tukar - category  -->
-    <!-- category={`/module/${slugify(post.frontmatter.category)}`}  -->
   </div>
-
-  <!-- // description={post.rawContent().slice(0, 100)}  
-// ={`${post.rawContent().slice(0, 100)}...`} -->
 </MainLayout>

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Logo from "/assets/Kampus.png";
+
+// Data import
 import navData from "../data/navData";
 
 
@@ -88,8 +90,8 @@ const Navbar = () => {
                   </div>
                   <nav>
                     <ul className="space-y-4">
-                      {navData.map((nav) => (
-                        <li>
+                      {navData.map((nav, i) => (
+                        <li key={i}>
                           <a
                             href={nav.path}
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:bg-yellow-400 hover:text-black"
