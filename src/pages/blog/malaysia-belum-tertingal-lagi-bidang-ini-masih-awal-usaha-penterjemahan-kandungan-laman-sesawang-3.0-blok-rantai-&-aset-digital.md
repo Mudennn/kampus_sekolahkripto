@@ -10,7 +10,9 @@ video: "https://www.youtube.com/embed/zEA3cbJI8io?start=526&end=614"
 author:  Mysekolahkripto
 date:  2023-01-25
 
-category: Kripto
+category: 
+- Kripto 
+
 
 draft: false
 ---

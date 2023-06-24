@@ -1,74 +1,81 @@
 ---
 import Card from "../../components/Card.astro";
-import { slugify, formatBlogPosts } from "../../js/utils";
+import { slugify, formatBlogPosts, generateCategoryData } from "../../js/utils";
 import MainLayout from "../../layouts/MainLayout.astro"
-
 
 export async function getStaticPaths(){
     return [
         {
             params: {category: slugify("Kripto")},
-            props: { name: 'Kripto' },
+            
             
         },
        
         {
             params: {category: slugify("Web 3")},
-            props: { name: "Web 3" },
+            
         },
         {
             params: {category: slugify("Blockchain")},
-            props: { name: "Blockchain" },
-        }
+            
+        },
+       
     ]
 }
 
-interface Frontmatter {
-  title: string;
-  slug: string;
-  thumbnail: string;
-  subheading: string;
-  category: string;
-}
+// interface Frontmatter {
+//   title: string;
+//   slug: string;
+//   thumbnail: string;
+//   subheading: string;
+//   category: string;
+// }
 
 const { category } = Astro.params;
-const { name } = Astro.props;
+// const { name } = Astro.props;
+// console.log("🚀 ~ file: [category].astro:36 ~ nama:", name)
 
 
-const posts = await Astro.glob<Frontmatter>("../blog/*.md");
-const formattedPosts = formatBlogPosts(posts);
-const catPosts = formattedPosts.filter((post => slugify(post.frontmatter.category) === category )) 
+const allPosts = await Astro.glob("../blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts);
+const catPosts = formattedPosts.filter(
+  (post) => slugify(post.frontmatter.category) === category
+);
 
 ---
 
-<MainLayout title= {name} >
-    <div class="p-4">
-        <h2 class="lg:text-3xl text-3xl font-bold text-center text-white">Kategori</h2>
-        <h3 class="text-sm lg:text-base py-2 text-center text-gray-400 mt-2">
-          Semua blog tentang {category} <span class="text-yellow-400">{name}</span>
-        </h3>
-      </div>
-    
-      <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
-        <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">
-          <div
-            class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
-          >
-            {
-              catPosts.map((post) => (
-                <Card
-                  title={post.frontmatter.title}
-                  subheading={post.frontmatter.subheading}
-                  href={post.url}
-                  thumbnail={post.frontmatter.thumbnail}
-                  category={post.frontmatter.category}
-                 
-                />
-              ))
-            }
-          </div>
+<MainLayout title= {category} >
+    <section aria-label={`Semua blog tentang ${category}`}>
+      <div class="p-4">
+          <h2 class="lg:text-3xl text-3xl font-bold text-center text-white">Kategori</h2>
+          <h3 class="text-sm lg:text-base py-2 text-center text-jacarta-200 mt-2 capitalize">
+            Semua blog tentang {category.replace(/-/g, " ")} 
+          </h3>
         </div>
-    
-        
-      </div>
+      
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24">
+          <div class="px-4 py-8 mx-2 sm:mx-auto max-w-7xl lg:py-18">
+            <div
+              class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
+            > 
+              {
+                catPosts.map((post) => (
+                <Card frontmatter={post.frontmatter} url={post.url} tagType="h2" />
+                  // <Card
+                  //   title={post.frontmatter.title}
+                  //   subheading={post.frontmatter.subheading}
+                  //   href={post.url}
+                  //   thumbnail={post.frontmatter.thumbnail}
+                  //   category={post.frontmatter.category}
+      
+                  // />
+                  
+                ))
+              }
+            </div>
+          </div>
+      
+      
+        </div>
+    </section>
 </MainLayout>

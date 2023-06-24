@@ -6,10 +6,8 @@ date: 2023-05-31
 
 thumbnail : /assets/tezos1.jpg
 layout: "../../layouts/BlogPostLayout.astro"
-
 category: 
-- Kripto 
-- Web 3
+- Wallet
 
 draft: false
 ---

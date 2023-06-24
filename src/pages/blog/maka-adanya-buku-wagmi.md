@@ -9,7 +9,9 @@ thumbnail : /assets/tezos1.jpg
 
 author: Mysekolahkripto
 date: 2022-08-02
-category: Web 3
+category: 
+- Kripto 
+
 
 draft: false
 ---

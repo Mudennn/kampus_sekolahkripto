@@ -1,13 +1,12 @@
 ---
 // import utils
-import { slugify, formatDate } from "../js/utils";
+import { slugify, formatDate, generateCategoryData } from "../js/utils";
 
 // import components
 import MainLayout from "./MainLayout.astro";
 
 
 const { frontmatter } = Astro.props;
-
 const { title, description, date, category, author, thumbnail } = frontmatter;
 ---
 

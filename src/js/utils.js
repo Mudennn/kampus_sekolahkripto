@@ -41,7 +41,7 @@ export function slugify(text) {
     if(sortByDate){
       filteredPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
     } else {
-      filteredPosts.sort(() => Mat.random() - 0.5)
+      filteredPosts.sort(() => Math.random() - 0.5)
     }
 
     // limit if number is passed
@@ -49,4 +49,15 @@ export function slugify(text) {
       return filteredPosts.slice(0, limit);
     }
     return filteredPosts;
+  }
+
+  export function generateCategoryData(categories) {
+    let categoryData = [];
+    categories.forEach((category) => {
+      categoryData.push({
+        name: category,
+        slug: `${slugify(category)}`,
+      });
+    });
+    return categoryData;
   }

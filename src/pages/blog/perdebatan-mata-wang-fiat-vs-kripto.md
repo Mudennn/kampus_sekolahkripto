@@ -11,7 +11,9 @@ layout: "../../layouts/BlogPostLayout.astro"
 author: Ilham Qayyum, ybilham.eth
 date: 2022-10-08
 
-category: Kripto
+category: 
+- Kripto 
+
 
 draft: false
 ---
