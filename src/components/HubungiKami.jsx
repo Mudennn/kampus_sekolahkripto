@@ -125,7 +125,7 @@ const HubungiKami = () => {
 
         {/* Form  */}
         <div className="w-full lg:max-w-lg lg:w-1/2 rounded-xl mt-0 md:mt-10">
-          <div className="relative rounded-lg  bg-jacarta-800 p-8 shadow-lg sm:p-12">
+          <div className="relative rounded-lg  bg-jacarta-800 p-8 shadow-lg sm:p-12 border-jacarta-600 border-2">
             <form ref={form} onSubmit={sendEmail}>
               <div className="mb-6">
                 <label className="text-white">Nama Penuh <span className="text-red">*</span></label>
