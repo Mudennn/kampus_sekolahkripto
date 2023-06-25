@@ -8,6 +8,7 @@ thumbnail : /assets/tezos1.jpg
 layout: "../../layouts/BlogPostLayout.astro"
 category: 
 - Wallet
+- Blockchain
 
 draft: false
 ---

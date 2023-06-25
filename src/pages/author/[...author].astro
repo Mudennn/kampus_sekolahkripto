@@ -4,7 +4,6 @@ import { slugify, formatBlogPosts } from "../../js/utils";
 // import BG from "assets/Mask-group.png";
 import MainLayout from "../../layouts/MainLayout.astro"
 
-
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("../blog/*.md");
   const formattedPosts = formatBlogPosts(allPosts);
@@ -16,30 +15,31 @@ export async function getStaticPaths() {
       (post) => post.frontmatter.author === author
     );
     return {
-      params: { author: slugify(author) },
+      params: { author: slugify(author), posts: authorPosts },
       props: {
         authorName: author,
-        posts: authorPosts,
+        postss: authorPosts,
       },
     };
   });
 }
 
-const { author } = Astro.params;
+const { author, posts } = Astro.params;
 console.log("🚀 ~ file: [...author].astro:29 ~ author:", author)
-const { posts, authorName } = Astro.props;
+const { postss, authorName } = Astro.props;
+
 // const { content } = Astro.props;
 // console.log("🚀 ~ file: [...author].astro:45 ~ posts:", content)
 // console.log("🚀 ~ file: [...author].astro:45 ~ authorName:", authorName)
 
 ---
 
-<MainLayout title= {authorName} >
+<MainLayout title= {author} >
     <section>
       <div class="p-4">
           <h2 class="lg:text-3xl text-3xl font-bold text-center text-white">Kategori</h2>
           <h3 class="text-sm lg:text-base py-2 text-center text-jacarta-200 mt-2">
-            Semua blog dari {authorName} 
+            Semua blog dari {author} 
           </h3>
         </div>
       
@@ -49,7 +49,7 @@ const { posts, authorName } = Astro.props;
               class="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full"
             >
               {
-                posts?.map((post) => (
+                postss.map((post) => (
                 <Card frontmatter={post.frontmatter} url={post.url} tagType="h2" />
                 ))
               }
